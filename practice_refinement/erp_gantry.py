@@ -1,0 +1,144 @@
+# Task 2
+# In Singapore, electronic road pricing (ERP) is implemented
+# on various expressways to regulate traffic.
+#
+# Lately there has been a change in the ERP rates at 5 gantries across some expressways.
+
+# The following program calculates the change in rates of these 5 gantries.
+
+for i in range(5):
+    expressway = input("Enter name of gantry:")
+    old = float(input("Enter old rate:"))
+    new = float(input("Enter new rate:"))
+    change = new - old
+    print("Change is",change)
+
+# Your program code and output for each of Tasks 2 should be saved
+# in a single .ipynb file using JupyterLab. For example, your program
+# code and output for Task 2 should be saved as:
+#  TASK2___.ipynb
+
+#  Make sure that each of your .ipynb files shows the required output in JupyterLab.
+# For each of the sub-tasks, add a comment using the hash symbol '#'
+# at the beginning of your code to indicate the sub-task
+# that the program code belongs to.
+
+###########################################################
+# 6. Edit the program so that:
+# a)    It works for any number of gantries.
+#       The program must display a suitable input message. [1]
+###########################################################
+# numGantry = int(input("Enter the number of gantries to input: "))
+# for i in range(5):
+#     expressway = input("Enter name of gantry:")
+#     old = float(input("Enter old rate:"))
+#     new = float(input("Enter new rate:"))
+#     change = new - old
+#     print("Change is",change)
+
+
+
+
+###########################################################
+# b)    The name of gantry is accepted if it is made up of only
+#       letters and is of a maximum length of 20.
+#       A suitable error message must be displayed and the program
+#       must loop until the name of the gantry is an input of a maximum of 20 letters. [4]
+###########################################################
+# Copy + Paste & Write your code here
+# numGantry = int(input("Enter the number of gantries to input: "))
+# for i in range(5):
+#     expressway = input("Enter name of gantry:")
+#     old = float(input("Enter old rate:"))
+#     new = float(input("Enter new rate:"))
+#     change = new - old
+#     print("Change is",change)
+
+# numGantry = int(input("Enter the number of gantries to input: "))
+# for i in range(numGantry):
+#     while True:
+#         expressway = input("Enter name of gantry:")
+
+#         if expressway.isalpha() and len(expressway) <= 20:
+#             print(f"{expressway} is a valid gantry name. ")
+#             break
+#         else:
+#             print("{expressway} is not a valid name")
+#             print("A valid entry name is not more than 20 letters")
+#     old = float(input("Enter old rate:"))
+#     new = float(input("Enter new rate:"))
+#     change = new - old
+#     print("Change is",change)
+
+
+    
+    
+
+
+
+
+###########################################################
+# c)    The name of each gantry for which the ERP rate has
+#       been increased is stored in a list and then displayed. [4]
+###########################################################
+# Copy + Paste & Write your code here
+gantry_increase = []
+numGantry = int(input("Enter the number of gantries to input: "))
+for i in range(numGantry):
+    while True:
+        expressway = input("Enter name of gantry:")
+
+        if expressway.isalpha() and len(expressway) <= 20:
+            print(f"{expressway} is a valid gantry name. ")
+            break
+        else:
+            print("{expressway} is not a valid name")
+            print("A valid entry name is not more than 20 letters")
+    old = float(input("Enter old rate:"))
+    new = float(input("Enter new rate:"))
+    change = new - old
+    print("Change is",change)
+
+    if new > old:
+        gantry_increase.append(expressway)
+          
+          
+for name in gantry_increase:
+    print(f"{name}price has increased")
+      
+       
+
+
+
+###########################################################
+# d)    The total number of gantries which saw an increase
+#       in the ERP rate is displayed. [1]
+###########################################################
+# Copy + Paste & Write your code here 
+
+gantry_increase = []
+numGantry = int(input("Enter the number of gantries to input: "))
+for i in range(numGantry):
+    while True:
+        expressway = input("Enter name of gantry:")
+
+        if expressway.isalpha() and len(expressway) <= 20:
+            print(f"{expressway} is a valid gantry name. ")
+            break
+        else:
+            print("{expressway} is not a valid name")
+            print("A valid entry name is not more than 20 letters")
+    old = float(input("Enter old rate:"))
+    new = float(input("Enter new rate:"))
+    change = new - old
+    print("Change is",change)
+
+    if new > old:
+        gantry_increase.append(expressway)
+          
+          
+for name in gantry_increase:
+    print(f"{name}price has increased")
+
+# show how many increased    
+print(f"{len(gantry_increase    )} gantries saw an increase in price.")  
